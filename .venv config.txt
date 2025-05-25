@@ -1,0 +1,2 @@
+Set-ExecutionPolicy Unrestricted -Scope Process ; ../myvenv/Scripts/activate ; Set-ExecutionPolicy Restricted -Scope Process
+Set-ExecutionPolicy Unrestricted -Scope Process ; deactivate ; Set-ExecutionPolicy Restricted -Scope Process
