@@ -88,7 +88,7 @@ def pause_timer():
         title_label.grid_forget()
         pause_label.grid(row=0, column=1)
     else: 
-        timer = window.after(1, count_down, time_left-1)    # Resumes timer
+        timer = window.after(1000, count_down, time_left-1)    # Resumes timer
         pause_button.config(text="Pause")    # Revert to last shown title
         pause_label.grid_forget()
         title_label.grid(row=0, column=1)
