@@ -1,0 +1,3 @@
+Facebook,glimlingan@gmail.com,password123
+Twitter,glimlingan@gmail.com,abcdef
+Instagram,glimlingan@gmail.com,xsM#7rl*FE25$v!ql3
