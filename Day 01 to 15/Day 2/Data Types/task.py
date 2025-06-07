@@ -1,0 +1,5 @@
+print(len("12345"))
+print(type(True))
+print(type(True))
+print(type(True))
+print(type(True))
