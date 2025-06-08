@@ -38,11 +38,11 @@ current_card = {}
 def remove_card():    # TODO: Keep track of number of known words in GUI
     global current_card
     words_dict.remove(current_card)
-    print(current_card)
+    # print(current_card)
     current_card_series = pd.DataFrame.from_dict(current_card, orient="index").transpose().iloc[0]
-    print(df_to_learn)
+    # print(df_to_learn)
     df_to_learn.drop(df_to_learn.index[df_to_learn[LANGUAGE] == current_card_series[LANGUAGE]], inplace=True)
-    df_to_learn.reset_index(drop=True, inplace=True)
+    # df_to_learn.reset_index(drop=True, inplace=True)
     df_to_learn.to_csv(f"data/{LANGUAGE.lower()}_words_to_learn.csv", index=False)
 
 # ---------------------------- RESET PROGRESS ------------------------------- #
