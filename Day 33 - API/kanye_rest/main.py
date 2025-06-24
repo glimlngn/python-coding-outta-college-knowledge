@@ -4,9 +4,10 @@ import requests
 
 
 def get_quote():
-    response = requests.get(url="http://api.kanye.rest").json()["quote"]
+    response = requests.get(url="http://api.kanye.rest")
     response.raise_for_status()
-    canvas.itemconfig(quote_text, text=response)
+    data = response.json()["quote"]
+    canvas.itemconfig(quote_text, text=data)
     print(response)
 
 window = Tk()
