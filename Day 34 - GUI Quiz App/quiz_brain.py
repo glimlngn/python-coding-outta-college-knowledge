@@ -1,11 +1,11 @@
 import html
 
 class QuizBrain:
-
     def __init__(self, q_list):
         self.question_number = 0
         self.score = 0
         self.question_list = q_list
+        self.question_count = len(q_list)
         self.current_question = None
 
     def still_has_questions(self):
@@ -23,9 +23,8 @@ class QuizBrain:
         correct_answer = self.current_question.answer # type: ignore
         if user_answer.lower() == correct_answer.lower():
             self.score += 1
-            print("You got it right!")
+            print("You got it right!\t", f"Score: {self.score}/{len(self.question_list)}")
+            return True
         else:
-            print("That's wrong.")
-
-        print(f"Your current score is: {self.score}/{self.question_number}")
-        print("\n")
+            print("That's wrong.\t\t", f"Score: {self.score}/{len(self.question_list)}")
+            return False
