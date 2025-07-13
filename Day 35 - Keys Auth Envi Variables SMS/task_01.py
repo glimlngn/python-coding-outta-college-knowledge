@@ -14,7 +14,7 @@ print(response.status_code)
 
 weather_data = response.json()
 print("dt_txt", "\t\t\t", "weather_id", "\t", "description")
-for datetime in weather_data["list"]:
-    print(datetime["dt_txt"], "\t", 
-          datetime["weather"][0]["id"], "\t\t", 
-          datetime["weather"][0]["description"])
+for hour_time in weather_data["list"]:
+    print(hour_time["dt_txt"], "\t", 
+          hour_time["weather"][0]["id"], "\t\t", 
+          hour_time["weather"][0]["description"])
